@@ -214,25 +214,6 @@
 <span class="font-body-md text-on-surface">担任</span>
 </label>
 </div>
-<div class="px-md py-sm border-b border-surface-variant/50 flex flex-wrap items-center gap-md relative z-10 bg-surface-container-lowest/50">
-<span class="font-label-sm text-on-surface-variant uppercase tracking-wider font-bold">連携先:</span>
-<label class="flex items-center gap-xs cursor-pointer hover:bg-surface-variant/30 px-2 py-1 rounded transition-colors">
-<input type="checkbox" class="form-checkbox rounded border-outline-variant text-primary focus:ring-primary w-4 h-4 checkbox-target" value="通級">
-<span class="font-body-md text-on-surface">通級</span>
-</label>
-<label class="flex items-center gap-xs cursor-pointer hover:bg-surface-variant/30 px-2 py-1 rounded transition-colors">
-<input type="checkbox" class="form-checkbox rounded border-outline-variant text-primary focus:ring-primary w-4 h-4 checkbox-target" value="つむぎ">
-<span class="font-body-md text-on-surface">つむぎ</span>
-</label>
-<label class="flex items-center gap-xs cursor-pointer hover:bg-surface-variant/30 px-2 py-1 rounded transition-colors">
-<input type="checkbox" class="form-checkbox rounded border-outline-variant text-primary focus:ring-primary w-4 h-4 checkbox-target" value="スキップステップ">
-<span class="font-body-md text-on-surface">スキップステップ</span>
-</label>
-<label class="flex items-center gap-xs cursor-pointer hover:bg-surface-variant/30 px-2 py-1 rounded transition-colors">
-<input type="checkbox" class="form-checkbox rounded border-outline-variant text-primary focus:ring-primary w-4 h-4 checkbox-target" value="担任">
-<span class="font-body-md text-on-surface">担任</span>
-</label>
-</div>
 <textarea id="diary-content" class="w-full min-h-[400px] p-lg font-body-lg text-body-lg bg-transparent border-none focus:ring-0 resize-none text-on-surface placeholder:text-outline-variant relative z-10" placeholder="Write your observations here... Focus on specific behaviors, interactions, or moments of growth today."></textarea>
 </div>
 </section>
@@ -331,7 +312,6 @@
                 if (result.status === 'success') {
                     alert('Google ドキュメントに保存されました！\n' + result.url);
                     diaryContent.value = ''; // Clear after saving
-                    document.querySelectorAll('.checkbox-target').forEach(cb => cb.checked = false); // Clear checkboxes
                     document.querySelectorAll('.checkbox-target').forEach(cb => cb.checked = false); // Clear checkboxes
                 } else {
                     alert('エラーが発生しました: ' + result.message);
